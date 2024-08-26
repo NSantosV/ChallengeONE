@@ -1,0 +1,149 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F2F5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100vw;  /* Usa 100% del ancho de la ventana */
+    height: 100vh; /* Usa 100% del alto de la ventana */
+    padding: 20px; /* Reducido el padding para verificar visibilidad */
+    box-sizing: border-box;
+    border: 1px solid red; /* Borde temporal para depurar */
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    background-color: #F0F2F5;
+    height: 600px;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: 0px solid #ddd; /* Cambiado para ver claramente el borde */
+}
+
+/* Estilo para el placeholder */
+textarea::placeholder {
+    font-size: 50px; /* Tamaño de fuente para el placeholder */
+    font-weight: bold; /* Aplicar negrita al placeholder */
+    color: #888; /* Color del placeholder */
+}
+
+.info {
+    margin-top: 10px;
+}
+
+.info small {
+    color: #888;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 20px 100px;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #B1B1B1;
+}
+
+button#encryptBtn {
+    background-color: #B1B1B1;
+}
+
+button#encryptBtn:hover {
+    background-color: #0056A1;
+}
+
+button#decryptBtn {
+    background-color: #B1B1B1;
+}
+
+button#decryptBtn:hover {
+    background-color: #0056A1;
+}
+
+button#copyBtn {
+    background-color: #B1B1B1;
+    display: none; /* Inicialmente oculto */
+}
+
+button#copyBtn:hover {
+    background-color: #0056A1;
+}
+
+.right-section {
+    display: flex;
+    height: 850px;
+    border-radius: 20px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid blue; /* Borde temporal para depurar */
+}
+
+.right-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right-section p {
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+
+    textarea {
+        height: 120px;
+        font-size: 0.875rem;
+    }
+
+    .info small {
+        font-size: 0.75rem;
+    }
+}
